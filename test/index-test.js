@@ -1,3 +1,4 @@
+console.error("HALP!")
 const expect = require('expect')
 const fs = require('fs')
 const jsdom = require('jsdom')
@@ -20,7 +21,7 @@ describe('index', () => {
     })
   })
 
-  it('calls console.log("HALP!")', done => {
+  it('calls console.log()', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
 
     jsdom.env(html, [src], {
